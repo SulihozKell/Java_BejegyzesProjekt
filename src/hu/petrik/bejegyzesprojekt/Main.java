@@ -52,6 +52,9 @@ public class Main {
         else {
             System.out.println("Nincs olyan bejegyzés aminek több mint 35 likeja lenne.");
         }
+
+        System.out.println("Összesen " + hanyBejegyzesKevesebbMint15Like(bejegyzesek) + " db bejegyzésnek van" +
+                "kevesebb mint 15 likeje.");
     }
 
     public static void fajlBeolvasas(String fajlNev, ArrayList<Bejegyzes> bejegyzesek) {
@@ -92,5 +95,15 @@ public class Main {
             }
         }
         return false;
+    }
+
+    public static int hanyBejegyzesKevesebbMint15Like(ArrayList<Bejegyzes> bejegyzesek) {
+        int db = 0;
+        for (Bejegyzes elem : bejegyzesek) {
+            if (elem.getLikeok() <= 15) {
+                db++;
+            }
+        }
+        return db;
     }
 }
