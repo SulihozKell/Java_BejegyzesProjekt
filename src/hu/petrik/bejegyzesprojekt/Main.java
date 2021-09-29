@@ -31,11 +31,6 @@ public class Main {
             bejegyzesek.get((int)veletlen).like();
         }
 
-        for (Bejegyzes elem : bejegyzesek) {
-            System.out.println(elem);
-            System.out.println();
-        }
-
         String bejegyzesSzovegModositasa = bejegyzesek.get(1).getTartalom();
         System.out.println(bejegyzesSzovegModositasa);
         System.out.println("A második bejegyzés módosítása: ");
@@ -43,6 +38,13 @@ public class Main {
         bejegyzesek.get(1).setTartalom(modositas);
 
         System.out.println(bejegyzesek.get(1));
+
+        for (Bejegyzes elem : bejegyzesek) {
+            System.out.println(elem);
+            System.out.println();
+        }
+
+        legnepszerubbBejegyzes(bejegyzesek);
     }
 
     public static void fajlBeolvasas(String fajlNev, ArrayList<Bejegyzes> bejegyzesek) {
@@ -62,5 +64,17 @@ public class Main {
         catch (IOException e) {
             System.out.println(e.getMessage());
         }
+    }
+
+    public static void legnepszerubbBejegyzes(ArrayList<Bejegyzes> bejegyzesek) {
+        int legnagyobb = bejegyzesek.get(0).getLikeok();
+
+        for (Bejegyzes elem : bejegyzesek) {
+            if (elem.getLikeok() > legnagyobb) {
+                legnagyobb = elem.getLikeok();
+            }
+        }
+
+        System.out.println("A legnépszerűbb bejegyzésnek " + legnagyobb + " likeja van.");
     }
 }
