@@ -1,5 +1,11 @@
 package hu.petrik.bejegyzesprojekt;
 
-public class Bejegyzes {
+import java.time.LocalDate;
 
+public class Bejegyzes {
+    String szerzo;
+    String tartalom;
+    int likeok;
+    LocalDate letrejott;
+    LocalDate szerkesztve;
 }
