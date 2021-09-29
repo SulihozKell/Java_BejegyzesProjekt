@@ -45,6 +45,13 @@ public class Main {
         }
 
         legnepszerubbBejegyzes(bejegyzesek);
+
+        if (tobbBejegyesMint35(bejegyzesek)) {
+            System.out.println("Van olyan bejegyzés aminek több mint 35 likeja van.");
+        }
+        else {
+            System.out.println("Nincs olyan bejegyzés aminek több mint 35 likeja lenne.");
+        }
     }
 
     public static void fajlBeolvasas(String fajlNev, ArrayList<Bejegyzes> bejegyzesek) {
@@ -76,5 +83,14 @@ public class Main {
         }
 
         System.out.println("A legnépszerűbb bejegyzésnek " + legnagyobb + " likeja van.");
+    }
+
+    public static boolean tobbBejegyesMint35(ArrayList<Bejegyzes> bejegyzesek) {
+        for (Bejegyzes elem : bejegyzesek) {
+            if (elem.getLikeok() >= 35) {
+                return true;
+            }
+        }
+        return false;
     }
 }
