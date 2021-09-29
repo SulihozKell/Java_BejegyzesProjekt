@@ -15,6 +15,14 @@ public class Main {
         System.out.println("Hány elemet adjak hozzá a listához? ");
         int db = Integer.parseInt(sc.nextLine());
 
+        for (int i = 0; i < db; i++) {
+            bejegyzesek.add(new Bejegyzes("", ""));
+        }
+
+        for (Bejegyzes elem : bejegyzesek) {
+            System.out.println(elem);
+        }
+
 
 
     }
