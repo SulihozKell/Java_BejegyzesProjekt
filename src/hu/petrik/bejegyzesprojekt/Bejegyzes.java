@@ -12,9 +12,9 @@ public class Bejegyzes {
     Bejegyzes(String szerzo, String tartalom) {
         this.szerzo = szerzo;
         this.tartalom = tartalom;
-        likeok = 0;
-        letrejott = LocalDateTime.now();
-        szerkesztve = LocalDateTime.now();
+        this.likeok = 0;
+        this.letrejott = LocalDateTime.now();
+        this.szerkesztve = LocalDateTime.now();
     }
 
     public String getSzerzo() {
@@ -27,6 +27,7 @@ public class Bejegyzes {
 
     public void setTartalom(String tartalom) {
         this.tartalom = tartalom;
+        this.szerkesztve = LocalDateTime.now();
     }
 
     public int getLikeok() {

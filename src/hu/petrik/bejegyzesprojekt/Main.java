@@ -35,6 +35,14 @@ public class Main {
             System.out.println(elem);
             System.out.println();
         }
+
+        String bejegyzesSzovegModositasa = bejegyzesek.get(1).getTartalom();
+        System.out.println(bejegyzesSzovegModositasa);
+        System.out.println("A második bejegyzés módosítása: ");
+        String modositas = sc.nextLine();
+        bejegyzesek.get(1).setTartalom(modositas);
+
+        System.out.println(bejegyzesek.get(1));
     }
 
     public static void fajlBeolvasas(String fajlNev, ArrayList<Bejegyzes> bejegyzesek) {
