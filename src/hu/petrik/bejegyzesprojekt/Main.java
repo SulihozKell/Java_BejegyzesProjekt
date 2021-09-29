@@ -55,6 +55,8 @@ public class Main {
 
         System.out.println("Összesen " + hanyBejegyzesKevesebbMint15Like(bejegyzesek) + " db bejegyzésnek van" +
                 "kevesebb mint 15 likeje.");
+
+        //likeokSzerintCsokkenoen(bejegyzesek);
     }
 
     public static void fajlBeolvasas(String fajlNev, ArrayList<Bejegyzes> bejegyzesek) {
@@ -106,4 +108,22 @@ public class Main {
         }
         return db;
     }
+/*
+    public static void likeokSzerintCsokkenoen(ArrayList<Bejegyzes> bejegyzesek) {
+        ArrayList<Bejegyzes> rendezettBejegyzesek = new ArrayList<>();
+
+        //int legnagyobb = bejegyzesek.get(0).getLikeok();
+
+        for (Bejegyzes elem1 : bejegyzesek) {
+            for (Bejegyzes elem2 : bejegyzesek) {
+
+            }
+        }
+
+        for (Bejegyzes elem : rendezettBejegyzesek) {
+            System.out.println(elem);
+            System.out.println();
+        }
+    }
+    */
 }
