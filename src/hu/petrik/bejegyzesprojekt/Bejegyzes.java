@@ -47,13 +47,13 @@ public class Bejegyzes {
 
     @Override
     public String toString() {
-        if (this.letrejott != this.szerkesztve) {
+        if (this.letrejott.equals(this.szerkesztve)) {
             return this.szerzo + "-" + this.likeok + "-" + this.letrejott +
-                    "\nSzerkesztve: " + this.szerkesztve + "\n" + this.tartalom;
+                    "\n" + this.tartalom;
         }
         else {
             return this.szerzo + "-" + this.likeok + "-" + this.letrejott +
-                    "\n" + this.tartalom;
+                    "\nSzerkesztve: " + this.szerkesztve + "\n" + this.tartalom;
         }
     }
 }
