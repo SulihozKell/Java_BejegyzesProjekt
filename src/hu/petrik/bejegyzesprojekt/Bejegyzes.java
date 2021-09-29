@@ -3,11 +3,11 @@ package hu.petrik.bejegyzesprojekt;
 import java.time.LocalDateTime;
 
 public class Bejegyzes {
-    String szerzo;
-    String tartalom;
-    int likeok;
-    LocalDateTime letrejott;
-    LocalDateTime szerkesztve;
+    private String szerzo;
+    private String tartalom;
+    private int likeok;
+    private LocalDateTime letrejott;
+    private LocalDateTime szerkesztve;
 
     Bejegyzes(String szerzo, String tartalom) {
         this.szerzo = szerzo;

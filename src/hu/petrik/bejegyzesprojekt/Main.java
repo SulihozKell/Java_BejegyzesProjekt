@@ -24,8 +24,16 @@ public class Main {
 
         fajlBeolvasas("bejegyzesek.txt", bejegyzesek);
 
+        int likeDbOszt = bejegyzesek.size() * 20;
+
+        for (int i = 0; i < likeDbOszt; i++) {
+            double veletlen = Math.random() * bejegyzesek.size();
+            bejegyzesek.get((int)veletlen).like();
+        }
+
         for (Bejegyzes elem : bejegyzesek) {
             System.out.println(elem);
+            System.out.println();
         }
     }
 
